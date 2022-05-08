@@ -1,0 +1,5 @@
+*.mkv
+*.mp4
+jpnLines.html
+/public/node_modules/
+/.idea/
