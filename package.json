@@ -4,5 +4,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "node-fetch": "*"
   }
 }

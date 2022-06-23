@@ -18,11 +18,20 @@ export const RECORDING_LOCATIONS = [
 /**
  * @return {Promise<SrtBlock[]>}
  */
-export const getTranslatedSrt = async (recordingDir) => {
+export const getSourceSrt = async (recordingDir) => {
     const srtPath = recordingDir + '/game_recording.jpn.srt';
-    const txtPath = recordingDir + '/translated_sentences.txt';
-
     const srcSrtStr = await fs.readFile(srtPath, 'utf8');
+    return srcSrtStr
+        .trim().split(/\n\n/)
+        .map(parseSrtSentence);
+};
+
+/**
+ * @return {Promise<SrtBlock[]>}
+ */
+export const getTranslatedSrt = async (recordingDir) => {
+    const txtPath = recordingDir + '/translated_sentences_deepl_api.txt';
+
     const translatedSentencesStr = await fs.readFile(txtPath, 'utf8');
 
     const japToEng = new Map(
@@ -31,15 +40,13 @@ export const getTranslatedSrt = async (recordingDir) => {
     const translateBlock = parsedBlock => {
         const japLine = parsedBlock.sentence;
         if (!japToEng.get(japLine.trim())) {
-            throw new Error('Missing translation for: ' + japLine);
+            throw new Error('Missing translation for: ' + japLine + ' at ' + parsedBlock.index);
         }
         parsedBlock.sentence = japToEng.get(japLine.trim());
 
         return parsedBlock;
     };
-    const srcJpnSrtBlocks = srcSrtStr
-        .trim().split(/\n\n/)
-        .map(parseSrtSentence);
+    const srcJpnSrtBlocks = await getSourceSrt(recordingDir);
     const translatedSrtBlocks = srcJpnSrtBlocks
         .map(parsedBlock => translateBlock({...parsedBlock}));
 
