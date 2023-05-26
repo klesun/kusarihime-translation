@@ -1,6 +1,6 @@
 # kusarihime-translation
 
-Youtube playthrough with English captions: https://www.youtube.com/watch?v=akB071ganDU&list=PL-0iwBRR7TeYrOsrIeg_pQUqrJruzwDvT
+Youtube playthrough with English subtitles: https://www.youtube.com/watch?v=akB071ganDU&list=PL-0iwBRR7TeYrOsrIeg_pQUqrJruzwDvT
 
 The recordings follow this guide: http://sagaoz.net/foolmaker/game/k/euthanasia.html which goes:
 - True End Roude (lap #1)
