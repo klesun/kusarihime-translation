@@ -2,6 +2,8 @@
 
 Youtube playthrough with English subtitles: https://www.youtube.com/watch?v=akB071ganDU&list=PL-0iwBRR7TeYrOsrIeg_pQUqrJruzwDvT
 
+Translation will be made using [gpt-3.5-turbo](https://platform.openai.com/docs/api-reference/making-requests) which gives much more accurate translation than DeepL and Google Translate, though, of course, still does not reach the lebel of a human translation.
+
 The recordings follow this guide: http://sagaoz.net/foolmaker/game/k/euthanasia.html which goes:
 - True End Roude (lap #1)
 - Untrue END1 Route (lap #2)
