@@ -12,12 +12,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 //
 // console.log(ololo);
 
-const jpnLinesPath = __dirname + "/../public/assets/lap1/loop1/jpnLines_preserved_pronunciations.txt";
+const jpnLinesPath = __dirname + "/../public/assets/lap1/loop2/jpnLines_preserved_pronunciations.txt";
 
 const main = async () => {
     const jphLinesTxt = await fs.readFile(jpnLinesPath, "utf8");
     for (const jpnLine of jphLinesTxt.split("\n")) {
-        const cleanSentence = jpnLine.replace(/^【.*?】/, "").replace(/。$/, "");
+        const cleanSentence = jpnLine.replace(/^【.*?】/, "");
         const prefix = jpnLine.slice(0, -cleanSentence.length);
 
         const { translations } = await fetch("https://api-free.deepl.com/v2/translate", {
@@ -25,7 +25,7 @@ const main = async () => {
             method: "POST",
             body: new URLSearchParams({
                 auth_key: "34897fe9-ef7a-2206-bc35-b1b39d2dcb82:fx",
-                text: cleanSentence,
+                text: cleanSentence.replace(/。$/, ""),
                 target_lang: "EN-US",
             }).toString(),
         }).then(rs => rs.json());
@@ -35,7 +35,9 @@ const main = async () => {
         }
 
         const translated = prefix + translations[0].text;
-        console.log(JSON.stringify({jpnLine, translated}));
+        console.log(jpnLine);
+        console.log(translated);
+        console.log();
     }
 };
 

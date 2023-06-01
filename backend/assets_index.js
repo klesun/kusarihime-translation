@@ -13,6 +13,9 @@ export const RECORDING_LOCATIONS = [
     __dirname + '/../public/assets/lap1/loop5',
     __dirname + '/../public/assets/lap1/loop6',
     __dirname + '/../public/assets/lap1/loop7',
+    // __dirname + '/../public/assets/lap1/loop8',
+    // __dirname + '/../public/assets/lap1/loop9',
+    // __dirname + '/../public/assets/lap1/loop10',
 ];
 
 /**
@@ -30,7 +33,7 @@ export const getSourceSrt = async (recordingDir) => {
  * @return {Promise<SrtBlock[]>}
  */
 export const getTranslatedSrt = async (recordingDir) => {
-    const txtPath = recordingDir + '/translated_sentences_deepl_api.txt';
+    const txtPath = recordingDir + '/translated_sentences_gpt.txt';
 
     const translatedSentencesStr = await fs.readFile(txtPath, 'utf8');
 

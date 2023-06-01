@@ -10,8 +10,8 @@ import { promises as fs } from "fs";
  */
 
 async function main() {
-    const inputStr = await fs.readFile("public/assets/lap1/loop4/gpt_input.json", "utf8");
-    const outputStr = await fs.readFile("public/assets/lap1/loop4/gpt_output.txt", "utf8");
+    const inputStr = await fs.readFile("public/assets/lap1/loop7/gpt_input.json", "utf8");
+    const outputStr = await fs.readFile("public/assets/lap1/loop7/gpt_output.txt", "utf8");
     const inputLines = JSON.parse(inputStr);
     const outputLines = outputStr.trimEnd().split("\n");
     let offset = 0;

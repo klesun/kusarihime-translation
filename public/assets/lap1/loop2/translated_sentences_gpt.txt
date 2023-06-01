@@ -488,16 +488,16 @@ It seems like only me and my mother haven't noticed something.
 【Natsuki】No, look... don't you think this could be somewhat exciting?
 
 【 潤 】やっぱり、そのつもりで……
-【Jun】I still can't believe
+【Jun】I still can't believe it...
 
 【夏生】あっ、でも、頼れそうなのがここだけだったのも本当なのよ？
-it, someone with the
+【Natsuki】Ah, but it's true that this was the only place we could rely on, right?
 
 【夏生】ねっ、これも何かの縁だと思って……
-same face as Juri...!
+【Natsuki】Hey, I think this is also some kind of fate...
 
 【 潤 】冗談じゃない、樹里と同じ顔した奴なんか……！
-.
+【Jun】This is no joke, someone with the same face as Juri...!
 
 【蔵女】……蔵女。
 【Kurame】...Kurame.
@@ -587,13 +587,13 @@ Natsuki-san had a mischievous smile on her face, as if she was up to something.
 【Itsuki】Huh?
 
 【夏生】灯籠流しの最終確認で、あちこち歩き回るからさ。ついでに案内してあげる。
-【Natsuki】I'll be walking around here and there for the final lantern check, so I'll guide you around. It might be a chance to recall something.
+【Natsuki】I'll be walking around here and there for the final lantern check, so I'll guide you around.
 
 【夏生】何か思い出すきっかけになるかもしれないでしょ？
-【Itsuki】...Ah...
+【Natsuki】It might become a trigger for remembering something, you know?
 
 【五樹】……ああ…………
-.
+【Itsuki】...Ah...
 
 確かにいまの僕は、ひとりで歩き回れるほどこの町に詳しくない。
 Certainly, I am not familiar enough with this town to walk around by myself.
